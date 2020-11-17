@@ -8,7 +8,9 @@ Ce plugin Jeedom `kiauvo` permet d'obtenir les valeurs d'un (ou plusieurs) véhi
 
 - Il utilise la librairie `kuvork` sous le capot, tous les problèmes liés à cette bibliothèque ne seront pas gérés ici,
 - Les actions sont gérées par UVO et peuvent prendre un certain temps à s'appliquer à la voiture,
-- :warning: lorsque vous chargez les données directement depuis le véhicule (`rafraîchir depuis le véhicule`) ce dernier sort de son cycle de veille et utilise la batterie 12V. Un abus de cette fonctionnalité est connu pour vider votre batterie. A utiliser donc sans abus et à vos risques et périls !
+- :warning: lorsque vous chargez les données directement depuis le véhicule (`rafraîchir depuis le véhicule`) ce dernier sort de son cycle de veille pendant quelques minutes (d'après mes tests 3 minutes) en utilisant la batterie 12V. Un abus de cette fonctionnalité est capable de décharger votre batterie. A utiliser donc sans abus et à vos risques et périls ! Ce problème est aussi remonté sur le plugin équivalent pour [Homey](https://github.com/gruijter/com.gruijter.hyundai_kia#how-to-get-live-status-updates).
+- Les serveurs UVO utilisés par cette application limitent le nombre de requêtes par heure à 100. Cette limitation semble être définie par adresse IP.
+
 
 ## Installation
 
