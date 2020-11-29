@@ -30,10 +30,10 @@ Pour cette partie vous devez déjà avoir connecté et configurer votre véhicul
 
 Dans la configuration du plugin, entrez les informations nécessaire au forctionnement du plugin: 
 
-- Utilisateur : Le nom de l'utilisateur de UVO
-- Mot de passe : Le mot de passe UVO
+- Utilisateur : L'**email** de l'utilisateur de UVO
+- Mot de passe : Le **mot de passe** UVO
 - Région : La région dans laquelle se trouve votre véhicule
-- Pin : Le code de sécurité de votre véhicule
+- Pin : Le **code de sécurité** de votre véhicule
 
 > Ces informations sont stoqués sur votre Jeedom et sont exclusivement utilisés par le demon UVO dans le cadre de ses interactions avec le system UVO et le véhicule.
 
@@ -63,6 +63,7 @@ Le paramère `Source d'énergie` vous permet de choisir le type de motorisation 
 
 Le paramère `Capacité de la batterie` n'est pas encore utilisé à ce jour.
 
+Le paramètre `Options du widget` permet de configurer les actions visibles sur le widget. En fonction de votre véhicule et des options disponible sur votre forfait UVO, il est possible que toutes ne soient pas disponibles. Vous pouvez donc les désactiver ici.
 
 ### Option d'actualisation des données
 
@@ -168,3 +169,22 @@ Voici un exemple ou:
 - La charge est en cours
 
 ![widget](./medias/widget-vehicle-act.png)
+
+## Problèmes
+
+### Le démon démare quelques secondes puis s'arrète
+
+Il est probable qu'il s'agisse d'un problème d'authentification. Pour en savoir plus, rendez-vous dans l'interface de configuration du plugin et consultez les logs du démon `kiauvo_node`.
+
+Si le texte `'Deamon kiauvo_node started'` n'y apparaît pas, c'est que le démon n'arrive pas à accéder aux serveurs UVO.
+
+Deux messages d'erreurs sont alors possibles : 
+
+`Bad credentials! Could not connect to UVO with user/password` => le nom d'utilisateur ou le mot de passe sont mal configurés.
+`Bad credentials! Could not connect to vehicle with pin` => la valeur du code pin n'est pas correcte.
+
+Assurez vous que l'email de l'utilisateur ainsi que son mot de passe sont correctement renseignés et que le code pin est le bon.
+
+### La position de mon véhicule est NaN, NaN
+
+La valeur d’emplacement est calculée à la création du véhicule, puis régulièrement pour chaque période de temps configurée pour ce véhicule sous le paramètre `Fréquence de mise à jour de la position`. Si ce dernier est à zéro, ou que la période n’est pas encore écoulée, il est possible que la valeur précédente reste. Il est possible de l’actualiser en lançant la commande `rafraîchir la position` ou via le bouton `Actualiser la position` du widget.
