@@ -77,6 +77,8 @@ Le paramère `Fréquence de mise à jour de l'odomètre` vous permet de définir
 
 Le paramère `Fréquence de mise à jour de la position` vous permet de définir à quel rythme Jeedom lis les informations de localisation du véhicule.
 
+Le paramère `Fréquence de mise en mode live` vous permet de définir à quel rythme Jeedom récupère les informations du véhicule quand le mode live est actif sur le véhicule. Pour en savoir plus, referez vous à la section `live` de cette documentation.
+
 > NB: pour cela le plugin ne contacte pas le véhicule mais le système UVO. Cela permet entre autre de ne pas user la batterie 12V du véhicule. Quand il roule, le véhicule dois envoyer de lui même régulièrement des informations au système UVO.
 
 ## Options de préchauffage
@@ -150,6 +152,8 @@ Noubliez pas de sauvegarder vos modifications.
 - `rafraîchir depuis le véhicule` : Rafraichir les données depuis le véhicule (:warning: tire sur la batterie 12V)
 - `rafraîchir la position` : Rafraichir les données de localisation du véhicule (:warning: tire sur la batterie 12V)
 - `rafraîchir l'odomètre` : Rafraichir les données de l'odomètre (:warning: tire sur la batterie 12V)
+- `activer le mode live` : Activer la remonté d'informations en live
+- `désactiver le mode live` : Arréter la remontée live d'informations
 
 ## Widget
 
@@ -169,6 +173,30 @@ Voici un exemple ou:
 - La charge est en cours
 
 ![widget](./medias/widget-vehicle-act.png)
+
+## Mode live
+
+Le mode live permet de remonter les informations plus régulièrement quand le véhicule est en marche, pour celà le rafraîchissement depuis le véhicule est utilisé au rythme définis par le paramètre `Fréquence de mise en mode live`. Le mode live se désactive quand le véhicule est de nouveau à l'arret, ou quand une commande est déclenchée, soit via le widget soit via un scénario. Le mode live ne démare toutefois pas seul, il nécessite une action externe.
+
+### Manuellement
+
+En utilisant l'application mobile ou l'application web de Jeedom, vous pouvez cliquer manuellement sur le bouton `Démarer` dans la section `Live` des actions.
+
+### Api
+
+Jeesom dispose d'une API externe documentée ici: https://doc.jeedom.com/fr_FR/core/4.0/api_http, qui vous permettera de déclencer la commande voulue depuis le média de votre choix.
+
+### Apairage Bluetooth
+
+Sur Android et iOS, il existe des applications capable de déclencher automatiquement Jeedom pour qu'il commence à recevoir des mises à jour en direct dès que votre téléphone se connecte au Bluetooth de la voiture.
+
+#### Android
+
+Il existe plusieurs applications qui peuvent faire cela. Pour Android, regardez [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate) et adaptez ce [flux](https://llamalab.com/automate/community/flows/37829) pour qu'il corresponde au Bluetooth de votre propre voiture et aux URL fournis dans l'onglet `Live` de la configuration de votre véhicule. Il est nécessaire de remplacer dans les urls dans les deux premiers blocs, et de choisir le périphérique Bluetooth sur le premier block de vérification de connexion.
+
+#### iOS
+
+Pour iOS, regardez au niveau de [Shortcuts](https://apps.apple.com/app/id915249334). Créez un `Shortcut` qui détecte l'état du Bluetooth et qui appel les urls fournis dans l'onglet `Live` de la configuration de votre véhicule, ou, adaptez ce [flux plus complexe](./medias/Jeedom+kiauvo+Bluetooth+live.png).
 
 ## Problèmes
 
