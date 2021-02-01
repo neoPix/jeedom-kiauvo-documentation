@@ -81,10 +81,6 @@ Le paramère `Fréquence de mise en mode live` vous permet de définir à quel r
 
 > NB: pour cela le plugin ne contacte pas le véhicule mais le système UVO. Cela permet entre autre de ne pas user la batterie 12V du véhicule. Quand il roule, le véhicule dois envoyer de lui même régulièrement des informations au système UVO.
 
-## Options de préchauffage
-
-Vous pouvez ensuite définir les options de préchauffage du véhicule. Il s'agit des options qui seront appliqués quand vous lancerez le préchauffage de votre véhicule.
-
 Noubliez pas de sauvegarder vos modifications.
 
 > C'est au moment de la sauvegarde que les commandes sont crées.
@@ -123,6 +119,9 @@ Noubliez pas de sauvegarder vos modifications.
 - `dégivrage vitre arrière` : Si le dégivrage de la vitre arrière est actif
 - `dégivrage vitre avant` : SI le dégivrage / désembuage de la vitre avant est actif
 - `temperatureSetpoint` : La température définie dans l'habitacle
+- `consigne température` : La température de consigne pour le conditiennement du véhicule
+- `consigne dégivrage` : La consigne de dégivrage pour le conditionnement du véhicule
+- `consigne chauffage` : La consigne de chauffage pour le conditionnement du véhicule
 
 ### Chassis
 
@@ -154,6 +153,9 @@ Noubliez pas de sauvegarder vos modifications.
 - `rafraîchir l'odomètre` : Rafraichir les données de l'odomètre (:warning: tire sur la batterie 12V)
 - `activer le mode live` : Activer la remonté d'informations en live
 - `désactiver le mode live` : Arréter la remontée live d'informations
+- `définir consigne température` : Définir la température de consigne (un chiffre en °C entre 14 et 30)
+- `définir consigne dégivrage` : Définir la consigne de dégivrage (0 ou 1)
+- `définir consigne chauffage` : Définir la consigne de chauffage (0 ou 1)
 
 ## Widget
 
@@ -173,6 +175,14 @@ Voici un exemple ou:
 - La charge est en cours
 
 ![widget](./medias/widget-vehicle-act.png)
+
+## Scénario de préchauffage
+
+Si vous partez a heure fixe, vous pouvez utiliser le plugin Agenda pour pré-conditionner votre véhicule. Afin que la température y soit a votre goût, en été comme en hiver, configurez un scénario comme suit.
+
+Définissez avnt tout vos consignes, puis lancez la chauffe.
+
+![conditionning scenario sample](./medias/scenario-conditionning.png)
 
 ## Mode live
 
