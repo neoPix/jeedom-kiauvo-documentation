@@ -223,6 +223,10 @@ Deux messages d'erreurs sont alors possibles :
 
 Assurez vous que l'email de l'utilisateur ainsi que son mot de passe sont correctement renseignés et que le code pin est le bon.
 
+Si le problème persiste, il est possible que le problème soit lié à l'authentification avec les serveurs UVO. Commencez par vous assurer que vous arrivez bien à vous connecter à cette url : [Login CCAPi KIA](https://prd.eu-ccapi.kia.com:8080/api/v1/user/oauth2/authorize?response_type=code&state=test&client_id=fdc85c00-0a2f-4c64-bcb4-2cfb1500730a&redirect_uri=https://prd.eu-ccapi.kia.com:8080/api/v1/user/oauth2/redirect). Si ce n'est pas le cas une procédure pour activer ou réactiver le compte vous sera proposé. Si vous arrivez sur une page blanche, c'est que vos identifiants sont les bons.
+
+Redémarrez ensuite le démon.
+
 ### La position de mon véhicule est NaN, NaN
 
 La valeur d’emplacement est calculée à la création du véhicule, puis régulièrement pour chaque période de temps configurée pour ce véhicule sous le paramètre `Fréquence de mise à jour de la position`. Si ce dernier est à zéro, ou que la période n’est pas encore écoulée, il est possible que la valeur précédente reste. Il est possible de l’actualiser en lançant la commande `rafraîchir la position` ou via le bouton `Actualiser la position` du widget.
