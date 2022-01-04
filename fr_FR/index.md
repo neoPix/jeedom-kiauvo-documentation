@@ -1,4 +1,4 @@
-# Plugin Kia-UVO
+# Plugin Kia UVO
 
 ## Présentation
 
@@ -18,7 +18,7 @@ Après le téléchargement du plugin, rendez vous sur sa page de configuration e
 
 ![Activation du plugin kia-uvo](./medias/install-enable.png)
 
-Par suite assurez vous que les dépendances soit bien installés. Elles sont nécessaire pour le démarage du demon `UVO`. Si le statut est `NOK`, pensez à relancer l'installation. 
+Par suite assurez vous que les dépendances soit bien installés. Elles sont nécessaire pour le démarrage du demon `UVO`. Si le statut est `NOK`, pensez à relancer l'installation. 
 
 > En fonction de votre environnement et de votre connexion internet, ceci prendra de quelques secondes à une dixaine minutes (Raspberry 3 et ADSL 3Mb/s).
 
@@ -33,7 +33,9 @@ Dans la configuration du plugin, entrez les informations nécessaire au forction
 - Utilisateur : L'**email** de l'utilisateur de UVO
 - Mot de passe : Le **mot de passe** UVO
 - Région : La région dans laquelle se trouve votre véhicule
+- Langue : La langue de votre application UVO (uniquement en europe)
 - Pin : Le **code de sécurité** de votre véhicule
+- Port : Le port applicatif du démon **réservé aux utilisateur avancés**)
 
 > Ces informations sont stoqués sur votre Jeedom et sont exclusivement utilisés par le demon UVO dans le cadre de ses interactions avec le system UVO et le véhicule.
 
@@ -97,12 +99,14 @@ Noubliez pas de sauvegarder vos modifications.
 
 ### Moteur
 
-- `charge batterie principale`: Niveau de charge de la batterie principale (pour les véhicules à énergie electriques)
+- `charge batterie principale`: Niveau de charge de la batterie principale (pour les véhicules à énergie electrique)
 - `charge batterie secondaire` : Niveau de charge de la batterie 12V
-- `en charge` : Si le véhicule est en charge (pour les véhicules à énergie electriques)
+- `en charge` : Si le véhicule est en charge (pour les véhicules à énergie electrique)
 - `régulateur de vitesse adaptatif` : Si le système de régulation de vitesse adaptatif est en marche
-- `branchée` : Le véhicule est-il branché (pour les véhicules à énergie electriques)
-- `branché à` : A quoi le véhicule est il branché (pour les véhicules à énergie electriques)
+- `branchée` : Le véhicule est-il branché (pour les véhicules à énergie electrique)
+- `branché à` : A quoi le véhicule est il branché (pour les véhicules à énergie electrique)
+- `limite de charge` : La limite de charge du véhicule pour une charge standard (pour les véhicules à énergie electrique)
+- `limite de charge rapide` : La limite de charge du véhicule pour une charge rapide (pour les véhicules à énergie electrique)
 - `temps estimé de charge` : Temps de charge estimé pour la charge en cours
 - `temps estimé de charge rapide` : Temps de charge sur une borne de charge rapide
 - `temps estimé de charge portable` : Temps de charge sur le sytème de charge 220V
@@ -110,6 +114,7 @@ Noubliez pas de sauvegarder vos modifications.
 - `portée totale` : Distance totale que le véhicule peut parcourir
 - `portée électrique` : Distance que le véhicule peut parcourir sur sa batterie
 - `portée carburant` : Distance que le véhicule peut parcourir avec son niveau de carburant
+- `sur la route` : Le moteur est-il démaré
 
 ### Chauffage
 
@@ -156,6 +161,8 @@ Noubliez pas de sauvegarder vos modifications.
 - `définir consigne température` : Définir la température de consigne (un chiffre en °C entre 14 et 30)
 - `définir consigne dégivrage` : Définir la consigne de dégivrage (0 ou 1)
 - `définir consigne chauffage` : Définir la consigne de chauffage (0 ou 1)
+- `définir la limite de charge rapide` : Définir la limite de charge rapide (50, 60, 70, 80 ou 100%)
+- `définir la limite de charge` : Définir la limite de charge standard (50, 60, 70, 80 ou 100%)
 
 ## Widget
 

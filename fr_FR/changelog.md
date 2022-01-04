@@ -1,8 +1,16 @@
-# Changelog Kia-UVO
+# Changelog Kia UVO
 
 >**IMPORTANT**
 >
 > S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
+
+## V1.2.2
+
+### Fonctionnalités
+
+- Possibilité de configurer la langue dans les option du plugin
+- Possibiliter de voir et modifier les limites de charge
+- Amélioration du widget
 
 ## V1.2.1
 
