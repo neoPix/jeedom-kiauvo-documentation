@@ -4,6 +4,15 @@
 >
 > S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+## Décembre 2023
+
+### Fonctionnalités
+
+- Mise à jours de la version de Bluelinky.
+- En cas d'échec d'une commande, le système re-tentera jusqu'à 4 fois avant de considérer la tentative comme un echec.
+- Identifiant permettant de démarer le démon en mode démo (pas de connexion réelle aux serveurs).
+- Test vehicles can now be added
+
 ## V1.2.2
 
 ### Fonctionnalités

@@ -35,7 +35,8 @@ Dans la configuration du plugin, entrez les informations nécessaire au forction
 - Région : La région dans laquelle se trouve votre véhicule
 - Langue : La langue de votre application UVO (uniquement en europe)
 - Pin : Le **code de sécurité** de votre véhicule
-- Port : Le port applicatif du démon **réservé aux utilisateur avancés**)
+- Port : Le port applicatif du démon (**réservé aux utilisateur avancés**)
+- Véhicules de test : Le nombre de véhicules virtuels ajouté par le démon
 
 > Ces informations sont stoqués sur votre Jeedom et sont exclusivement utilisés par le demon UVO dans le cadre de ses interactions avec le system UVO et le véhicule.
 
@@ -194,6 +195,13 @@ Définissez avnt tout vos consignes, puis lancez la chauffe.
 ## Mode live
 
 Le mode live permet de remonter les informations plus régulièrement quand le véhicule est en marche, pour celà le rafraîchissement depuis le véhicule est utilisé au rythme définis par le paramètre `Fréquence de mise en mode live`. Le mode live se désactive quand le véhicule est de nouveau à l'arret, ou quand une commande est déclenchée, soit via le widget soit via un scénario. Le mode live ne démare toutefois pas seul, il nécessite une action externe.
+
+## Mode démo
+
+Il es possible d'utiliser le plugin en mode démo, sans se connecter aux serveurs de la marque de véhicule. Ce mode est généralement utilisé pour raliser une démonstration du plugin ou pour tester des comportements. Afin de l'utiliser, vous devez : 
+
+- Utiliser le nom d'utilisateur : `demo@jeedom-plugin.com`
+- Utiliser le mot de passe : `D€m0JeED0M`
 
 ### Manuellement
 
