@@ -30,9 +30,9 @@ Pour cette partie vous devez déjà avoir connecté et configurer votre véhicul
 
 Dans la configuration du plugin, entrez les informations nécessaire au forctionnement du plugin: 
 
+- Région : La région dans laquelle se trouve votre véhicule
 - Utilisateur : L'**email** de l'utilisateur de UVO
 - Mot de passe : Le **mot de passe** UVO
-- Région : La région dans laquelle se trouve votre véhicule
 - Langue : La langue de votre application UVO (uniquement en europe)
 - Pin : Le **code de sécurité** de votre véhicule
 - Port : Le port applicatif du démon (**réservé aux utilisateur avancés**)
@@ -47,6 +47,13 @@ Une fois configuré, cliquez sur `sauvegarder`.
 Finalement, assurez vous que le demon démare bien. Cliquez sur le bouton `(Re)Démarer` et assurez vous que le statut soit sur `OK`. Il est aussi fortement recommandé d'activer la `Gestion automatique` ; elle permet à Jeedom de lancer automatiquement le démon au démarrage de Jeedom, ainsi que de le relancer en cas de problème.
 
 ![demon du plugin kia-uvo](./medias/install-demon.png)
+
+### Cas spécifique de l'europe
+
+Le cas de l'europe est senssiblement différent. Le nom d'utilisateur ainsi que le mot de passe ne sont pas demandés, en revanche un bouton `Se connecter` est affiché. Cliquez dessus et suivez la procédure d'authentification.
+Un tutoriel Youtube est disponible ici : https://youtu.be/n_n-cHklPd4
+
+**NB** : Vous ne pourrez pas lancer le démon tant que cette authentification n'aura pas eu lieu.
 
 ## Configuration des véhicules
 

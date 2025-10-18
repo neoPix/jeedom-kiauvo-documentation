@@ -4,6 +4,12 @@
 >
 > S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+## Octobre 2025
+
+### Fonctionnalités
+
+- Modification du mécanisme d'authentification pour le zone EU
+
 ## Décembre 2023
 
 ### Fonctionnalités
