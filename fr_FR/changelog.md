@@ -4,6 +4,12 @@
 >
 > S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+## Juin 2026
+
+### Correctifs
+
+- L'historisation et le nom des commandes ne sont plus écrasés lors des mises à jour si la commande existe déjà, préservant ainsi les modifications effectuées depuis la page de configuration.
+
 ## Octobre 2025
 
 ### Fonctionnalités
